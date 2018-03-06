@@ -7,12 +7,16 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Question Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.  123456Example 1:Input">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/06/Partition_Equal_Subset_Sum/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Question Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.  123456Example 1:Input">
+<meta property="og:updated_time" content="2018-03-06T14:37:31.513Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Question Given a non-empty array containing only positive integers, find if the array can be partitioned into two subsets such that the sum of elements in both subsets is equal.  123456Example 1:Input">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Partition_Equal_Subset_Sum" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Partition_Equal_Subset_Sum" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/06/Partition_Equal_Subset_Sum/" class="article-date">
   <time datetime="2018-03-06T14:52:21.625Z" itemprop="datePublished">2018-03-06</time>
@@ -93,176 +95,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Escape_The_Ghosts" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/06/Escape_The_Ghosts/" class="article-date">
-  <time datetime="2018-03-06T14:52:21.336Z" itemprop="datePublished">2018-03-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h1><blockquote>
-<p>You are playing a simplified Pacman game. You start at the point <em>(0, 0)</em>, and your destination is (<em>target[0], target[1]</em>). There are several ghosts on the map, the i-th ghost starts at (<em>ghosts[i][0], ghosts[i][1]</em>).</p>
-</blockquote>
-<blockquote>
-<p>Each turn, you and all ghosts simultaneously <em>may</em> move in one of 4 cardinal directions: north, east, west, or south, going from the previous point to a new point 1 unit of distance away.</p>
-</blockquote>
-<blockquote>
-<p>You escape if and only if you can reach the target before any ghost reaches you (for any given moves the ghosts may take.)  If you reach any square (including the target) at the same time as a ghost, it doesn’t count as an escape.</p>
-</blockquote>
-<blockquote>
-<p>Return True if and only if it is possible to escape.</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Example 1:</span><br><span class="line">Input:</span><br><span class="line">ghosts = [[1, 0], [0, 3]]</span><br><span class="line">target = [0, 1]</span><br><span class="line">Output: true</span><br><span class="line">Explanation:</span><br><span class="line">You can directly reach the destination (0, 1) at time 1, while the ghosts located at (1, 0) or (0, 3) have no way to catch up with you.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Example 2:</span><br><span class="line">Input:</span><br><span class="line">ghosts = [[1, 0]]</span><br><span class="line">target = [2, 0]</span><br><span class="line">Output: false</span><br><span class="line">Explanation:</span><br><span class="line">You need to reach the destination (2, 0), but the ghost at (1, 0) lies between you and the destination.</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Example 3:</span><br><span class="line">Input:</span><br><span class="line">ghosts = [[2, 0]]</span><br><span class="line">target = [1, 0]</span><br><span class="line">Output: false</span><br><span class="line">Explanation:</span><br><span class="line">The ghost can reach the target at the same time as you.</span><br></pre></td></tr></table></figure>
-<p>Note:</p>
-<ul>
-<li>All points have coordinates with absolute value &lt;= 10000.</li>
-<li>The number of ghosts will not exceed 100.</li>
-</ul>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Escape the ghosts</span></span><br><span class="line"><span class="comment"> * @author wander</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @param &#123;number[][]&#125; ghosts</span></span><br><span class="line"><span class="comment"> * @param &#123;number[]&#125; target</span></span><br><span class="line"><span class="comment"> * @return &#123;boolean&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> escapeGhosts = <span class="function"><span class="keyword">function</span>(<span class="params">ghosts, target</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// the way i will take to target</span></span><br><span class="line">    <span class="keyword">var</span> myTime = <span class="built_in">Math</span>.abs(target[<span class="number">0</span>]) + <span class="built_in">Math</span>.abs(target[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>, len = ghosts.length; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="keyword">var</span> ghost = ghosts[i];</span><br><span class="line">        <span class="comment">// if ghost's way is shorter, game over</span></span><br><span class="line">        <span class="keyword">if</span>((<span class="built_in">Math</span>.abs(ghost[<span class="number">0</span>] - target[<span class="number">0</span>]) + <span class="built_in">Math</span>.abs(ghost[<span class="number">1</span>] - target[<span class="number">1</span>])) &lt;= myTime) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// console.log(escapeGhosts([[1, 0], [0, 3]], [0, 1]));</span></span><br><span class="line"><span class="comment">// console.log(escapeGhosts([[1, 0]], [2, 0]));</span></span><br><span class="line"><span class="comment">// console.log(escapeGhosts([[2, 0]], [1, 0]));</span></span><br></pre></td></tr></table></figure>
+  
+    <a href="/2018/03/06/Escape_The_Ghosts/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/06/Escape_The_Ghosts/" data-id="cjefrx12q0002hgui1jrynt0x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Base_7" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/06/Base_7/" class="article-date">
-  <time datetime="2018-03-06T14:52:21.332Z" itemprop="datePublished">2018-03-06</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Question"><a href="#Question" class="headerlink" title="Question"></a>Question</h1><blockquote>
-<p>Given an integer, return its base 7 string representation.</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Example 1:</span><br><span class="line">in: 100</span><br><span class="line">out: &quot;202&quot;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Example 1:</span><br><span class="line">in: -7</span><br><span class="line">out: &quot;-10&quot;</span><br></pre></td></tr></table></figure>
-<p>Note:</p>
-<ul>
-<li>The input will be in range of [-1e7, 1e7].</li>
-</ul>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Base 7</span></span><br><span class="line"><span class="comment"> * @author wander</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * @param &#123;number&#125; num</span></span><br><span class="line"><span class="comment">  * @return &#123;string&#125;</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line"> <span class="keyword">var</span> convertToBase7 = <span class="function"><span class="keyword">function</span>(<span class="params">num</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">var</span> trueNum = <span class="built_in">Number</span>(num);</span><br><span class="line">     <span class="comment">// if string numbers (es6: isNaN)</span></span><br><span class="line">     <span class="keyword">if</span>(<span class="built_in">Number</span>.isNaN(trueNum)) &#123;</span><br><span class="line">         <span class="keyword">return</span> <span class="string">''</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="comment">// recursion</span></span><br><span class="line">     <span class="keyword">if</span>(num &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="string">'-'</span>+ convertToBase7(-num);</span><br><span class="line">     <span class="keyword">if</span>(num &lt; <span class="number">7</span>) <span class="keyword">return</span> <span class="string">''</span> + num;</span><br><span class="line">     <span class="keyword">return</span> convertToBase7(<span class="built_in">Math</span>.floor(num / <span class="number">7</span>)) * <span class="number">10</span> + num % <span class="number">7</span> + <span class="string">''</span>;</span><br><span class="line"> &#125;;</span><br><span class="line"></span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  *  console.log(typeof convertToBase7(100));</span></span><br><span class="line"><span class="comment">  *  console.log(convertToBase7(100));</span></span><br><span class="line"><span class="comment">  *  console.log(typeof convertToBase7(-7));</span></span><br><span class="line"><span class="comment">  *  console.log(convertToBase7(-7));</span></span><br><span class="line"><span class="comment">  *  console.log(typeof convertToBase7('aaa1111'));</span></span><br><span class="line"><span class="comment">  *  console.log(convertToBase7('aaa1111'));</span></span><br><span class="line"><span class="comment">  */</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/06/Base_7/" data-id="cjefrx1290000hguitierimfx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-home" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/05/home/" class="article-date">
-  <time datetime="2018-03-05T14:46:03.000Z" itemprop="datePublished">2018-03-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/05/home/">home</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/05/home/" data-id="cjefrttd80002m4uimx10u4ta" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/04/hello-world/" class="article-date">
-  <time datetime="2018-03-04T11:18:49.878Z" itemprop="datePublished">2018-03-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/04/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/04/hello-world/" data-id="cjefrttd10000m4uilh7cxp7c" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
