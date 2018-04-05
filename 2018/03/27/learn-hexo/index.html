@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 目录简介入门脚手架命令文章.md文件的开始采用如下形式描述即可，其中不能带:,测试过">
+<meta name="description" content="前言: 简介 开始搭建 命令 API测试   前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 简介Hexo 是一个快速、简洁且高效">
 <meta name="keywords" content="学习HEXO">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习HEXO的历程">
 <meta property="og:url" content="http://yoursite.com/2018/03/27/learn-hexo/index.html">
 <meta property="og:site_name" content="Wander Space">
-<meta property="og:description" content="前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 目录简介入门脚手架命令文章.md文件的开始采用如下形式描述即可，其中不能带:,测试过">
+<meta property="og:description" content="前言: 简介 开始搭建 命令 API测试   前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 简介Hexo 是一个快速、简洁且高效">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T15:22:27.926Z">
+<meta property="og:image" content="http://yoursite.com/images/boxing.jpg">
+<meta property="og:updated_time" content="2018-04-05T04:28:58.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习HEXO的历程">
-<meta name="twitter:description" content="前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 目录简介入门脚手架命令文章.md文件的开始采用如下形式描述即可，其中不能带:,测试过">
+<meta name="twitter:description" content="前言: 简介 开始搭建 命令 API测试   前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 简介Hexo 是一个快速、简洁且高效">
+<meta name="twitter:image" content="http://yoursite.com/images/boxing.jpg">
 
 
 
@@ -353,11 +355,65 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。<br>也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。<br>本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。</p>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><h2 id="脚手架"><a href="#脚手架" class="headerlink" title="脚手架"></a>脚手架</h2><h2 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h2><h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p>.md文件的开始采用如下形式描述即可，其中不能带<code>:</code>,测试过在tags中带了<code>:</code>，编译未通过:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: Partition Equal Subset Sum</span><br><span class="line">date: 2018-03-06 18:00:00</span><br><span class="line">tags: LeetCode Problem - Partition Equal Subset Sum</span><br><span class="line">category: LeetCode</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
-<h3 id="API测试"><a href="#API测试" class="headerlink" title="API测试"></a>API测试</h3><ul>
-<li>添加描述:<br><code>title</code>: 必填。你文章的名称，尽量简洁高效。<br><code>path</code>: 文章路径。<br><code>category</code>: 分类策略。其实就是你分类的文件目录。<br><code>tags</code>: 额外标签，可以取得小一点，实用就行。  <h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2></li>
-<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">next</a><br># 设置展开阅读:auto_excerpt.enable = true<br># 设置主题: scheme（有四种可选，可以多设置几个试试）<br># 设置tags\categories: hexo new page “tags”，然后在<code>index.md</code>里面设置<code>type: &quot;tags&quot;</code></li>
+        <ul>
+<li><a href="#%E5%89%8D%E8%A8%80">前言:</a></li>
+<li><a href="#%E7%AE%80%E4%BB%8B">简介</a></li>
+<li><a href="#%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA">开始搭建</a></li>
+<li><a href="#%E5%91%BD%E4%BB%A4">命令</a></li>
+<li><a href="#api%E6%B5%8B%E8%AF%95">API测试</a></li>
+</ul>
+<hr>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言:"></a>前言:</h1><p>逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。<br>也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。<br>本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。</p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<h1 id="开始搭建"><a href="#开始搭建" class="headerlink" title="开始搭建"></a>开始搭建</h1><p>从零开始搭建一个个人博客，内容比较多，推荐以下几个文章(官网是必看的)。</p>
+<ul>
+<li>基本操作：参见官方文档<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">官方文档</a></li>
+<li>配套<code>github</code>建立个人博客网上例子很多，推荐两个：<ul>
+<li><a href="https://www.cnblogs.com/fengxiongZz/p/7707219.html" target="_blank" rel="noopener">使用Hexo+Github一步步搭建属于自己的博客（基础）</a>    </li>
+<li><a href="https://blog.csdn.net/ainuser/article/details/77609180" target="_blank" rel="noopener">hexo+github搭建个人博客(超详细教程)</a>  </li>
+</ul>
+</li>
+</ul>
+<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><ul>
+<li><code>hexo g(hexo generate)</code>: 渲染source下的文件，生成到public下</li>
+<li><code>hexo s(hexo server)</code>: 启动hexo服务器 启动完毕后可本地访问个人博客</li>
+<li><code>hexo l(hexo list)</code>: 列出当前博客站点的一些信息(page\post\route\tag\category)<ul>
+<li>示例     <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt; hexo l post</span><br><span class="line">&gt;</span><br><span class="line">Date        Title                       Path                                  Category    Tags</span><br><span class="line">2018-03-06  Base 7                      _posts/Base_7.md                      LeetCode    LeetCode Problem - Base 7</span><br><span class="line">2018-03-06  Escape The Ghosts           _posts/Escape_The_Ghosts.md           LeetCode    LeetCode Problem - Escape The Ghosts</span><br><span class="line">2018-03-06  Partition Equal Subset Sum  _posts/Partition_Equal_Subset_Sum.md  LeetCode    LeetCode Problem - Partition Equal Subset Sum</span><br><span class="line">2018-03-27  学习HEXO的历程              _posts/learn-hexo.md                  发现新大陆  学习HEXO</span><br><span class="line">2018-04-03  js面向对象入门              _posts/js/js-oop.md                   js base     js</span><br><span class="line">2018-04-05  ppt-demo                    _posts/ppt/ppt-demo.md                ppt         reveal-demo</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h1><ul>
+<li><code>hexo new &lt;title&gt;</code>新建title.md文件</li>
+<li><a href="http://wowubuntu.com/markdown/index.html" target="_blank" rel="noopener">MARKDOWN语法</a>  </li>
+<li>TIP:<ul>
+<li>.md文件的开始采用如下形式描述即可，其中不能带<code>:</code>,测试过在tags中带了<code>:</code>，编译未通过:  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title: Partition Equal Subset Sum</span><br><span class="line">date: 2018-03-06 18:00:00</span><br><span class="line">tags: LeetCode Problem - Partition Equal Subset Sum</span><br><span class="line">category: LeetCode</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="API测试"><a href="#API测试" class="headerlink" title="API测试"></a>API测试</h1><ul>
+<li>添加描述:<br><code>title</code>: 必填。你文章的名称，尽量简洁高效。<br><code>path</code>: 文章路径。<br><code>category</code>: 分类策略。其实就是你分类的文件目录。<br><code>tags</code>: 额外标签，可以取得小一点，实用就行。<br>#hack<br>##静态资源<br>要知道hexo的原理是把你写的markdown文件按一定的规则渲染成html+css+js的，最终生成的网站，和我们手写效果是一样的，只不过是让你能够用写文档的方式写一个网站罢了。所以要想引入图片、css还是很容易的。  </li>
+<li>step1: 在source目录下新建文件夹，用于放置您的静态资源，如/source/<strong>images</strong>，放置一张图片(handsome.png)进去    </li>
+<li>step2: 在您的md文件中采用相对路径引用您存放的文件<code>![Alt text](/images/handsome.png)</code><br><img src="/images/boxing.jpg" alt="图片加载失败"><br>##页面资源<br>上面的例子阐释了如何加载一张图片，但是图片是不可能满足我们的，这辈子都不能满足。比如我们写了一个很酷炫的页面，要怎么去加载它呢？这时候如果把一堆静态资源丢到source下，很可能会报错。博主试过如下目录结构出错。  <pre><code>|-source
+|-ppt
+ |-css
+   |-print
+     |-paper.css
+     |-pdf.css
+   |-theme
+     |...
+   |-js
+     |reveal.js
+   index.html
+</code></pre>对你没看错，想要在某个md文件内引用我用reveal.js制作的ppt。但是在<code>hexo g</code>的时候会报错。这个错误是由js文件产生的，老是说js文件结尾有错。后来上网学了一招。  </li>
+<li><strong>将ppt目录拷贝至theme/next/source/下</strong>。因为theme的内容在<code>hexo g</code>的时候是直接拷贝至public下的，绕过了自带的渲染。这时候在你的md文件内相对链<a href="/ppt/index.html">ppt-demo.html</a>就可以了。  <h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1></li>
+<li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">next</a>  <ul>
+<li>设置展开阅读:auto_excerpt.enable = true  </li>
+<li>设置主题: scheme（有四种可选，可以多设置几个试试）  </li>
+<li>设置tags\categories: hexo new page “tags”，然后在<code>index.md</code>里面设置<code>type: &quot;tags&quot;</code></li>
+</ul>
+</li>
 </ul>
 
       
@@ -389,8 +445,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/06/Partition_Equal_Subset_Sum/" rel="next" title="Partition Equal Subset Sum">
-                <i class="fa fa-chevron-left"></i> Partition Equal Subset Sum
+              <a href="/2018/03/06/Base_7/" rel="next" title="Base 7">
+                <i class="fa fa-chevron-left"></i> Base 7
               </a>
             
           </div>
@@ -492,7 +548,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -503,7 +559,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -514,7 +570,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -557,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">3.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#入门"><span class="nav-number">4.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#脚手架"><span class="nav-number">4.1.</span> <span class="nav-text">脚手架</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令"><span class="nav-number">4.2.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章"><span class="nav-number">4.3.</span> <span class="nav-text">文章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#API测试"><span class="nav-number">4.3.1.</span> <span class="nav-text">API测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题"><span class="nav-number">4.4.</span> <span class="nav-text">主题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始搭建"><span class="nav-number">3.</span> <span class="nav-text">开始搭建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">4.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章"><span class="nav-number">5.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#API测试"><span class="nav-number">6.</span> <span class="nav-text">API测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题"><span class="nav-number">7.</span> <span class="nav-text">主题</span></a></li></ol></div>
             
 
           </div>
@@ -723,7 +779,7 @@
   
 
     
-      <script id="dsq-count-scr" src="https://myname.disqus.com/count.js" async></script>
+      <script id="dsq-count-scr" src="https://wander.disqus.com/count.js" async></script>
     
 
     
@@ -734,7 +790,7 @@
           this.page.title = '学习HEXO的历程';
         };
         var d = document, s = d.createElement('script');
-        s.src = 'https://myname.disqus.com/embed.js';
+        s.src = 'https://wander.disqus.com/embed.js';
         s.setAttribute('data-timestamp', '' + +new Date());
         (d.head || d.body).appendChild(s);
       </script>
