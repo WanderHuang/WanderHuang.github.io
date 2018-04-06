@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -60,13 +60,13 @@
 <link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/global-128.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/global-32.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/global-16.png?v=5.1.4">
 
 
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
@@ -95,7 +95,7 @@
 <meta property="og:description" content="前言: 简介 开始搭建 命令 API测试   前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 简介Hexo 是一个快速、简洁且高效">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/boxing.jpg">
-<meta property="og:updated_time" content="2018-04-05T04:28:58.882Z">
+<meta property="og:updated_time" content="2018-04-06T03:40:17.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="学习HEXO的历程">
 <meta name="twitter:description" content="前言: 简介 开始搭建 命令 API测试   前言:逛github相关的帖子时，发现了hexo。正好想要做一个个人的博客，用来记录自己的各类感悟，所以花一些时间学习学习，以后博客可以放github,省得去注册csdn、掘金这些博客。也算是一个私人日志，希望能记录下自己关于技术、生活、社会等相关的信息。本文记录使用hexo遇到的一些坑，算是一个总结。持续更新。 简介Hexo 是一个快速、简洁且高效">
@@ -107,12 +107,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
+    scheme: 'Gemini',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"bounceLeftIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"bounceLeftIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -146,8 +146,8 @@
 
 
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<!-- 添加背景-->
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans" class="wander-background-blue">
 
   
   
@@ -436,28 +436,53 @@
 </li>
 </ul>
 <h1 id="API测试"><a href="#API测试" class="headerlink" title="API测试"></a>API测试</h1><ul>
-<li>添加描述:<br><code>title</code>: 必填。你文章的名称，尽量简洁高效。<br><code>path</code>: 文章路径。<br><code>category</code>: 分类策略。其实就是你分类的文件目录。<br><code>tags</code>: 额外标签，可以取得小一点，实用就行。<br>#hack<br>##静态资源<br>要知道hexo的原理是把你写的markdown文件按一定的规则渲染成html+css+js的，最终生成的网站，和我们手写效果是一样的，只不过是让你能够用写文档的方式写一个网站罢了。所以要想引入图片、css还是很容易的。  </li>
+<li>添加描述:<br><code>title</code>: 必填。你文章的名称，尽量简洁高效。<br><code>path</code>: 文章路径。<br><code>category</code>: 分类策略。其实就是你分类的文件目录。<br><code>tags</code>: 额外标签，可以取得小一点，实用就行。  </li>
+</ul>
+<h1 id="hack"><a href="#hack" class="headerlink" title="hack"></a>hack</h1><h2 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h2><p>要知道hexo的原理是把你写的markdown文件按一定的规则渲染成html+css+js的，最终生成的网站，和我们手写效果是一样的，只不过是让你能够用写文档的方式写一个网站罢了。所以要想引入图片、css还是很容易的。  </p>
+<ul>
 <li>step1: 在source目录下新建文件夹，用于放置您的静态资源，如/source/<strong>images</strong>，放置一张图片(handsome.png)进去    </li>
-<li>step2: 在您的md文件中采用相对路径引用您存放的文件<code>![Alt text](/images/handsome.png)</code><br><img src="/images/boxing.jpg" alt="图片加载失败"><br>##页面资源<br>上面的例子阐释了如何加载一张图片，但是图片是不可能满足我们的，这辈子都不能满足。比如我们写了一个很酷炫的页面，要怎么去加载它呢？这时候如果把一堆静态资源丢到source下，很可能会报错。博主试过如下目录结构出错。  <pre><code>|-source
-|-ppt
- |-css
-   |-print
-     |-paper.css
-     |-pdf.css
-   |-theme
-     |...
-   |-js
-     |reveal.js
-   index.html
-</code></pre>对你没看错，想要在某个md文件内引用我用reveal.js制作的ppt。但是在<code>hexo g</code>的时候会报错。这个错误是由js文件产生的，老是说js文件结尾有错。后来上网学了一招。  </li>
-<li><strong>将ppt目录拷贝至theme/next/source/下</strong>。因为theme的内容在<code>hexo g</code>的时候是直接拷贝至public下的，绕过了自带的渲染。这时候在你的md文件内相对链<a href="/ppt/index.html">ppt-demo.html</a>就可以了。  <h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1></li>
+<li>step2: 在您的md文件中采用相对路径引用您存放的文件<code>![Alt text](/images/handsome.png)</code><br><img src="/images/boxing.jpg" alt="图片加载失败">  <h2 id="页面资源"><a href="#页面资源" class="headerlink" title="页面资源"></a>页面资源</h2>上面的例子阐释了如何加载一张图片，但是图片是不可能满足我们的，这辈子都不能满足。比如我们写了一个很酷炫的页面，要怎么去加载它呢？这时候如果把一堆静态资源丢到source下，很可能会报错。博主试过如下目录结构出错。  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">|-source</span><br><span class="line">  |-ppt</span><br><span class="line">    |-css</span><br><span class="line">      |-print</span><br><span class="line">        |-paper.css</span><br><span class="line">        |-pdf.css</span><br><span class="line">      |-theme</span><br><span class="line">        |...</span><br><span class="line">      |-js</span><br><span class="line">        |reveal.js</span><br><span class="line">      index.html</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>对你没看错，想要在某个md文件内引用我用reveal.js制作的ppt。但是在<code>hexo g</code>的时候会报错。这个错误是由js文件产生的，老是说js文件结尾有错。后来上网学了一招。  </p>
+<ul>
+<li><strong>将ppt目录拷贝至theme/next/source/下</strong>。因为theme的内容在<code>hexo g</code>的时候是直接拷贝至public下的，绕过了自带的渲染。这时候在你的md文件内相对链<a href="/ppt/index.html">ppt-demo.html</a>就可以了。  <h1 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h1>在<code>_config.yml</code>内设置<code>theme: next</code></li>
 <li><a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">next</a>  <ul>
 <li>设置展开阅读:auto_excerpt.enable = true  </li>
 <li>设置主题: scheme（有四种可选，可以多设置几个试试）  </li>
-<li>设置tags\categories: hexo new page “tags”，然后在<code>index.md</code>里面设置<code>type: &quot;tags&quot;</code></li>
+<li>设置tags\categories: hexo new page “tags”，然后在<code>index.md</code>里面设置<code>type: &quot;tags&quot;</code>  </li>
 </ul>
 </li>
 </ul>
+<h1 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h1><p>hexo是一个静态博客框架，里面的样式自然是高度可配置的。以博主使用的next主题为例：  </p>
+<pre><code>theme
+  |-next
+      |-.github
+      |-languages : 语言包
+      |-layout    : 布局包
+      |-scripts   : 脚本包.swig swig前端模板引擎
+        |-source    : 源码包
+      |-test      : 测试包
+</code></pre><p>这其中<code>layout</code>包内的<code>_custom</code>就是用于用户自定义的脚本。其余目录大家可以自由阅读，没有十足把握不要轻易修改，不然搞坏了要恢复回去就不容易了。这讲一下背景图片。  </p>
+<ul>
+<li>首先在页面内定位到body元素。他的class为<code>class=&quot;pace-done&quot;</code>。然后webstorm全局搜索发现这个class是在pace.min.js内写的。  </li>
+<li>修改<code>pace-done</code>的内容肯定是不允许的，我们继续查看<code>themes/next/layout/_layout.swig</code>(这个文件是总的布局文件，最后生成的代码可以在<code>/public/index.html</code>内看到)。在<code>_layout.swig</code>内搜索body。</li>
+<li>忽略swig模板语法。我们只需要关心<code>body</code>元素的样式即可，在body内加入<code>class=&quot;wander-background-blue&quot;&gt;</code>。是的，只是在这里加了一个class。因为上一段分析的时候pace-done是在js脚本内添加的，所以这里在元素上直接写class，两者不会存在冲突。 </li>
+<li>接着定义您的<code>.wander-background-blue</code>即可  <pre><code class="text">.wander-background-blue {
+background :#1f47bb;
+background-image: -webkit-linear-gradient(135deg, #13498b, #13194b);
+background-image: -moz-linear-gradient(45deg, #13498b, #13194b);
+background-image: -ms-linear-gradient(45deg, #13498b 0, #13194b 100%);
+background-image: -o-linear-gradient(45deg, #13498b, #13194b);
+background-image: linear-gradient(135deg, #13498b, #13194b);
+}
+</code></pre>
+这里需要说明一下:<code>layout</code>内是脚本内容，<code>source</code>才是源码。所以，这一段脚本应该放在<code>themes/next/source/css</code>下，框架开发者已经给我们预留了一个用户自定义文件，<code>themes/next/source/css/_custom/_custom.styl</code>。脚本放里面即可。  </li>
+</ul>
+<blockquote>
+<p>上面讲的是一种定位和修改样式的思路，其余样式大家可以自行开发，充分定制自己的博客。  </p>
+</blockquote>
+<p>实际上大部分样式都可以在<code>themes/next/_config.yml</code>内定制。有兴趣的可以查看该文档，英文描述也比较简单易懂，另外，博主的源码也欢迎查看。</p>
 
       
     </div>
@@ -488,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/06/Escape_The_Ghosts/" rel="next" title="Escape The Ghosts">
-                <i class="fa fa-chevron-left"></i> Escape The Ghosts
+              <a href="/2018/03/06/Base_7/" rel="next" title="Base 7">
+                <i class="fa fa-chevron-left"></i> Base 7
               </a>
             
           </div>
@@ -656,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始搭建"><span class="nav-number">3.</span> <span class="nav-text">开始搭建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">4.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章"><span class="nav-number">5.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#API测试"><span class="nav-number">6.</span> <span class="nav-text">API测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题"><span class="nav-number">7.</span> <span class="nav-text">主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言:</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始搭建"><span class="nav-number">3.</span> <span class="nav-text">开始搭建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#命令"><span class="nav-number">4.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文章"><span class="nav-number">5.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#API测试"><span class="nav-number">6.</span> <span class="nav-text">API测试</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#hack"><span class="nav-number">7.</span> <span class="nav-text">hack</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#静态资源"><span class="nav-number">7.1.</span> <span class="nav-text">静态资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面资源"><span class="nav-number">7.2.</span> <span class="nav-text">页面资源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#主题"><span class="nav-number">8.</span> <span class="nav-text">主题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#样式"><span class="nav-number">9.</span> <span class="nav-text">样式</span></a></li></ol></div>
             
 
           </div>
@@ -710,7 +735,7 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
 
 
 
@@ -774,6 +799,9 @@
 
 
 
+  
+  
+
 
 
 
@@ -810,6 +838,16 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
@@ -917,6 +955,7 @@
 
 
   
+
 
 </body>
 </html>
