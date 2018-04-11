@@ -266,10 +266,10 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                目前共计 6 个标签
+                目前共计 7 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/LeetCode-Problem-Base-7/" style="font-size: 12px; color: #ccc">LeetCode Problem - Base 7</a> <a href="/tags/LeetCode-Problem-Escape-The-Ghosts/" style="font-size: 12px; color: #ccc">LeetCode Problem - Escape The Ghosts</a> <a href="/tags/LeetCode-Problem-Partition-Equal-Subset-Sum/" style="font-size: 12px; color: #ccc">LeetCode Problem - Partition Equal Subset Sum</a> <a href="/tags/js/" style="font-size: 12px; color: #ccc">js</a> <a href="/tags/reveal-demo/" style="font-size: 12px; color: #ccc">reveal-demo</a> <a href="/tags/学习HEXO/" style="font-size: 12px; color: #ccc">学习HEXO</a>
+              <a href="/tags/LeetCode-Problem-Base-7/" style="font-size: 12px; color: #ccc">LeetCode Problem - Base 7</a> <a href="/tags/LeetCode-Problem-Escape-The-Ghosts/" style="font-size: 12px; color: #ccc">LeetCode Problem - Escape The Ghosts</a> <a href="/tags/LeetCode-Problem-Partition-Equal-Subset-Sum/" style="font-size: 12px; color: #ccc">LeetCode Problem - Partition Equal Subset Sum</a> <a href="/tags/js/" style="font-size: 12px; color: #ccc">js</a> <a href="/tags/reveal-demo/" style="font-size: 12px; color: #ccc">reveal-demo</a> <a href="/tags/yahoo-14/" style="font-size: 12px; color: #ccc">yahoo-14</a> <a href="/tags/学习HEXO/" style="font-size: 12px; color: #ccc">学习HEXO</a>
             </div>
           </div>
         
@@ -292,12 +292,10 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
     </div>
 
   
@@ -343,7 +341,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -354,7 +352,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -365,7 +363,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -465,7 +463,7 @@
 
   
     <span class="site-pv">
-      <i class="fa fa-eye">站点独立访客</i>
+      <i class="fa fa-eye">页面浏览量</i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
       
     </span>
@@ -599,26 +597,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://wander.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/tags/index.html';
-          this.page.identifier = 'tags/index.html';
-          this.page.title = '分类';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://wander.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -634,8 +612,58 @@
 
 
 
+  
 
 
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'WanderHuang',
+            repo: 'WanderHuang.github.io',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '18087e936dfedafa5eb3b6b5286d0a3a6d74ffb5',
+            
+                client_id: 'd178b7afd1771941a950'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 

@@ -331,8 +331,7 @@
                   <i class="fa fa-comment-o"></i>
                 </span>
                 <a href="/2018/03/06/Base_7/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/03/06/Base_7/" itemprop="commentCount"></span>
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/06/Base_7/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -436,8 +435,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/06/Escape_The_Ghosts/" rel="next" title="Escape The Ghosts">
-                <i class="fa fa-chevron-left"></i> Escape The Ghosts
+              <a href="/2018/03/06/Partition_Equal_Subset_Sum/" rel="next" title="Partition Equal Subset Sum">
+                <i class="fa fa-chevron-left"></i> Partition Equal Subset Sum
               </a>
             
           </div>
@@ -479,12 +478,10 @@
 
   
     <div class="comments" id="comments">
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
     </div>
 
   
@@ -539,7 +536,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -550,7 +547,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -561,7 +558,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -677,7 +674,7 @@
 
   
     <span class="site-pv">
-      <i class="fa fa-eye">站点独立访客</i>
+      <i class="fa fa-eye">页面浏览量</i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
       
     </span>
@@ -811,26 +808,6 @@
 
   
 
-    
-      <script id="dsq-count-scr" src="https://wander.disqus.com/count.js" async></script>
-    
-
-    
-      <script type="text/javascript">
-        var disqus_config = function () {
-          this.page.url = 'http://yoursite.com/2018/03/06/Base_7/';
-          this.page.identifier = '2018/03/06/Base_7/';
-          this.page.title = 'Base 7';
-        };
-        var d = document, s = d.createElement('script');
-        s.src = 'https://wander.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', '' + +new Date());
-        (d.head || d.body).appendChild(s);
-      </script>
-    
-
-  
-
 
 
 
@@ -846,8 +823,58 @@
 
 
 
+  
 
 
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'WanderHuang',
+            repo: 'WanderHuang.github.io',
+            
+            lang: "zh-Hans" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '18087e936dfedafa5eb3b6b5286d0a3a6d74ffb5',
+            
+                client_id: 'd178b7afd1771941a950'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
 
 
 
